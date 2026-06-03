@@ -7,7 +7,7 @@ import { FiExternalLink } from "react-icons/fi";
 
 const User = () => {
   return (
-    <div className="w-3/4 border-2 border-olive-300 p-10 flex flex-col">
+    <div className="w-3/4 border-2 border-olive-400 p-10 flex flex-col">
       <div className="flex flex-row gap-6">
         <div className="flex justify-between">
           <img
@@ -61,8 +61,8 @@ const User = () => {
       <div className="border-t border-bone text-olive-400 mt-4"></div>
 
       <div className="flex flex-row justify-between px-24">
-        <div className="border-r border-bone pr-24 text-olive-500 mt-4">
-          <h2 className="font-body text-olive text-sm font-semibold mt-4">
+        <div className="border-r border-bone pr-24 text-olive-500 mt-2">
+          <h2 className="font-body text-olive text-sm font-semibold mt-2">
             Followers
             <h1 className="font-heading text-smoky text-5xl font-semibold">
               2
@@ -70,8 +70,8 @@ const User = () => {
           </h2>
         </div>
 
-        <div className="border-r border-bone pr-24  text-olive-500 mt-4">
-          <h2 className="font-body text-olive text-sm font-semibold mt-4">
+        <div className="border-r border-bone pr-24  text-olive-500 mt-2">
+          <h2 className="font-body text-olive text-sm font-semibold mt-2">
             Following
             <h1 className="font-heading text-smoky text-5xl font-semibold">
               39
@@ -79,8 +79,8 @@ const User = () => {
           </h2>
         </div>
 
-        <div className="border-r border-bone pr-24  text-olive-500 mt-4">
-          <h2 className="font-body text-olive text-sm font-semibold mt-4">
+        <div className="border-r border-bone pr-24  text-olive-500 mt-2">
+          <h2 className="font-body text-olive text-sm font-semibold mt-2">
             Repos
             <h1 className="font-heading text-smoky text-5xl font-semibold">
               18
@@ -88,8 +88,8 @@ const User = () => {
           </h2>
         </div>
 
-        <div className="text-olive-500 mt-4">
-          <h2 className="font-body text-olive text-sm font-semibold mt-4">
+        <div className="text-olive-500 mt-2">
+          <h2 className="font-body text-olive text-sm font-semibold mt-2">
             Total Stars
             <h1 className="font-heading text-smoky text-5xl font-semibold">
               5
