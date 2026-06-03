@@ -27,6 +27,15 @@ const User = () => {
             aka Ace cse '28 | dsa grind x dev zone exploring and figuring out
             building quietly, showing loudly later
           </p>
+          <a
+            href="https://github.com/simranbali-ace04"
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center gap-1 mt-4 px-3 py-2 bg-olive-50 border-2 border-olive-500 rounded-md text-sm font-body text-smoky active:scale-95 "
+          >
+            View on GitHub
+            <FiExternalLink size={16} className="text-olive" />
+          </a>
           <div className="flex gap-5 p-4 font-body text-olive text-sm">
             <span className="flex gap-0.5 items-center">
               <FaLocationDot size={20} className="text-olive" />
