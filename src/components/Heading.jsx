@@ -4,7 +4,7 @@ import { IoSearch } from "react-icons/io5";
 
 const Heading = () => {
   return (
-    <div>
+    
       <div>
         <span className="flex justify-between items-center px-20 py-2.5">
           <h2 className="font-heading text-3xl text-smoky font-bold">
@@ -32,7 +32,7 @@ const Heading = () => {
             <input
               type="text"
               placeholder="Enter GitHub username..."
-              className="h-12 border-2 border-olive-400 px-4 bg-olive-100 w-max-lg w-96"
+              className="h-12 border-2 border-olive-400 px-4 bg-olive-50 w-max-lg w-96"
             />
 
             <button className="h-12 w-12 flex items-center justify-center bg-black text-white active:scale-95 ">
@@ -41,7 +41,7 @@ const Heading = () => {
           </div>
         </div>
       </div>
-    </div>
+    
   );
 };
 
