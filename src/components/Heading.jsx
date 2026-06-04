@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import { FaGithub } from "react-icons/fa";
 import { IoSearch } from "react-icons/io5";
 
-const Heading = () => {
+const Heading = ({fetchUser}) => {
+  const [username , setUsername] = useState('');
+
   return (
     <div>
       <span className="flex justify-between items-center px-20 py-2.5">
@@ -30,9 +32,17 @@ const Heading = () => {
             type="text"
             placeholder="Enter GitHub username..."
             className="h-12 border-2 border-olive-400 px-4 bg-olive-50 w-max-lg w-96"
+            value={username}
+            onChange={(e)=>{
+              setUsername(e.target.value)
+            }}
           />
 
-          <button className="h-12 w-12 flex items-center justify-center bg-black text-white active:scale-95 ">
+          <button className="h-12 w-12 flex items-center justify-center bg-black text-white active:scale-95 "
+          onClick={()=>{
+            fetchUser(username);
+            
+          }}>
             <IoSearch size={20} />
           </button>
         </div>

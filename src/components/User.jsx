@@ -5,30 +5,32 @@ import { FaLocationDot } from "react-icons/fa6";
 import { BsCalendar2Date } from "react-icons/bs";
 import { FiExternalLink } from "react-icons/fi";
 
-const User = () => {
+const User = ({ data, totalStars }) => {
+  if (!data) {
+    return null;
+  }
   return (
     <div className="w-3/4 border-2 border-olive-400 p-10 flex flex-col">
       <div className="flex flex-row gap-6">
         <div className="flex justify-between">
           <img
-            src="https://tse1.mm.bing.net/th/id/OIP.3ARNT5gTNJSahwYCO5AQlAHaHa?rs=1&pid=ImgDetMain&o=7&rm=3"
+            src={data.avatar_url}
             alt="user_avatar"
             className="h-40 flex flex-wrap rounded-full object-fit"
           />
         </div>
         <div className="w-2/3">
           <h1 className="font-heading text-4xl font-semibold tracking-tight">
-            Simran Bali
+            {data.name}
           </h1>
           <p className="font-body text-olive text-md font-semibold">
-            @simranbali-ace04
+            @{data.login}
           </p>
           <p className="font-body text-olive text-sm mt-2 max-w-3/5">
-            aka Ace cse '28 | dsa grind x dev zone exploring and figuring out
-            building quietly, showing loudly later
+            {data.bio}
           </p>
           <a
-            href="https://github.com/simranbali-ace04"
+            href={data.html_url}
             target="_blank"
             rel="noreferrer"
             className="inline-flex items-center gap-1 mt-4 px-3 py-2 bg-olive-50 border-2 border-olive-500 rounded-md text-sm font-body text-smoky active:scale-95 "
@@ -39,20 +41,20 @@ const User = () => {
           <div className="flex gap-5 p-4 font-body text-olive text-sm">
             <span className="flex gap-0.5 items-center">
               <FaLocationDot size={20} className="text-olive" />
-              <p>Delhi, India</p>
+              <p>{data.location}</p>
             </span>
             <span className="flex gap-0.5 items-center">
               <IoIosLink size={20} className="text-olive" />
               <a
-                href="https://simranbali-ace04.github.io/"
+                href={data.blog}
                 className="text-olive hover:underline font-semibold"
               >
-                simranbali-ace04.github.io
+                {data.blog}
               </a>
             </span>
             <span className="flex gap-0.5 items-center">
               <BsCalendar2Date size={20} className="text-olive" />
-              <p>Joined January 2020</p>
+              <p>Joined {new Date(data.updated_at).toLocaleDateString()}</p>
             </span>
           </div>
         </div>
@@ -65,7 +67,7 @@ const User = () => {
           <h1 className="font-body text-olive text-sm font-semibold mt-2">
             Followers
             <p className="font-heading text-smoky text-5xl font-semibold">
-              2
+              {data.followers}
             </p>
           </h1>
         </div>
@@ -74,7 +76,7 @@ const User = () => {
           <h1 className="font-body text-olive text-sm font-semibold mt-2">
             Following
             <p className="font-heading text-smoky text-5xl font-semibold">
-              39
+              {data.following}
             </p>
           </h1>
         </div>
@@ -83,7 +85,7 @@ const User = () => {
           <h1 className="font-body text-olive text-sm font-semibold mt-2">
             Repos
             <p className="font-heading text-smoky text-5xl font-semibold">
-              18
+              {data.public_repos}
             </p>
           </h1>
         </div>
@@ -92,7 +94,7 @@ const User = () => {
           <h1 className="font-body text-olive text-sm font-semibold mt-2">
             Total Stars
             <p className="font-heading text-smoky text-5xl font-semibold">
-              5
+              {totalStars}
             </p>
           </h1>
         </div>
