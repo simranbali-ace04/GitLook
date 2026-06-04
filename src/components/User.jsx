@@ -54,7 +54,7 @@ const User = ({ data, totalStars }) => {
             </span>
             <span className="flex gap-0.5 items-center">
               <BsCalendar2Date size={20} className="text-olive" />
-              <p>Joined {new Date(data.updated_at).toLocaleDateString()}</p>
+              <p>Joined {new Date(data.created_at).toLocaleDateString()}</p>
             </span>
           </div>
         </div>
