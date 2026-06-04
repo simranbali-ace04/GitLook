@@ -62,39 +62,39 @@ const User = () => {
 
       <div className="flex flex-row justify-between px-24">
         <div className="border-r border-bone pr-24 text-olive-500 mt-2">
-          <h2 className="font-body text-olive text-sm font-semibold mt-2">
+          <h1 className="font-body text-olive text-sm font-semibold mt-2">
             Followers
-            <h1 className="font-heading text-smoky text-5xl font-semibold">
+            <p className="font-heading text-smoky text-5xl font-semibold">
               2
-            </h1>
-          </h2>
+            </p>
+          </h1>
         </div>
 
         <div className="border-r border-bone pr-24  text-olive-500 mt-2">
-          <h2 className="font-body text-olive text-sm font-semibold mt-2">
+          <h1 className="font-body text-olive text-sm font-semibold mt-2">
             Following
-            <h1 className="font-heading text-smoky text-5xl font-semibold">
+            <p className="font-heading text-smoky text-5xl font-semibold">
               39
-            </h1>
-          </h2>
+            </p>
+          </h1>
         </div>
 
         <div className="border-r border-bone pr-24  text-olive-500 mt-2">
-          <h2 className="font-body text-olive text-sm font-semibold mt-2">
+          <h1 className="font-body text-olive text-sm font-semibold mt-2">
             Repos
-            <h1 className="font-heading text-smoky text-5xl font-semibold">
+            <p className="font-heading text-smoky text-5xl font-semibold">
               18
-            </h1>
-          </h2>
+            </p>
+          </h1>
         </div>
 
         <div className="text-olive-500 mt-2">
-          <h2 className="font-body text-olive text-sm font-semibold mt-2">
+          <h1 className="font-body text-olive text-sm font-semibold mt-2">
             Total Stars
-            <h1 className="font-heading text-smoky text-5xl font-semibold">
+            <p className="font-heading text-smoky text-5xl font-semibold">
               5
-            </h1>
-          </h2>
+            </p>
+          </h1>
         </div>
       </div>
     </div>

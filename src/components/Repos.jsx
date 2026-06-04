@@ -6,12 +6,12 @@ import { GoDotFill } from "react-icons/go";
 
 const Repos = () => {
   return (
-    <div className="w-3/4 h-auto p-8">
+    <div className="w-3/4 h-auto max-h-screen p-8">
       <div className="flex flex-row mt-5 gap-2">
         <div className="font-heading text-3xl text-smoky font-semibold">
           <h1>Repositories</h1>
         </div>
-        <div className="border-t border-bone text-olive-500 w-full mt-5"></div>
+        <div className="border-t border-bone text-olive-400 font-semibold w-full mt-5"></div>
       </div>
 
       <div className="flex flex-row mt-3 gap-3">
@@ -30,7 +30,7 @@ const Repos = () => {
           <p className="font-body text-xs font-semibold text-olive ml-4 tracking-wider">
             GitLook is a GitHub profile finder built with React and the GitHub
             REST API for exploring developer profiles, repositories, and
-            statistics.<repellendus className="Lorem1000"></repellendus>
+            statistics.
           </p>
           <div className="font-body text-xs font-semibold text-olive-500 ml-4 mt-5 flex gap-8">
             <p className="flex flex-row justify-center">
@@ -51,8 +51,6 @@ const Repos = () => {
               <FiExternalLink size={14} className="mt-1" />
             </div>
           </div>
-
-          
         </div>
 
         <div className="w-1/3 border-2 border-olive-400 min-h-40">
@@ -68,7 +66,7 @@ const Repos = () => {
           <p className="font-body text-xs font-semibold text-olive ml-4 tracking-wider">
             GitLook is a GitHub profile finder built with React and the GitHub
             REST API for exploring developer profiles, repositories, and
-            statistics.<repellendus className="Lorem1000"></repellendus>
+            statistics.
           </p>
           <div className="font-body text-xs font-semibold text-olive-500 ml-4 mt-5 flex gap-8">
             <p className="flex flex-row justify-center">
@@ -89,9 +87,9 @@ const Repos = () => {
               <FiExternalLink size={14} className="mt-1" />
             </div>
           </div>
-          </div>
+        </div>
 
-          <div className="w-1/3 border-2 border-olive-400 min-h-40">
+        <div className="w-1/3 border-2 border-olive-400 min-h-40">
           <div className="flex flex-row justify-between">
             <h2 className="font-heading text-2xl font-semibold text-smoky p-4">
               GitLook
@@ -104,7 +102,7 @@ const Repos = () => {
           <p className="font-body text-xs font-semibold text-olive ml-4 tracking-wider">
             GitLook is a GitHub profile finder built with React and the GitHub
             REST API for exploring developer profiles, repositories, and
-            statistics.<repellendus className="Lorem1000"></repellendus>
+            statistics.
           </p>
           <div className="font-body text-xs font-semibold text-olive-500 ml-4 mt-5 flex gap-8">
             <p className="flex flex-row justify-center">
@@ -125,7 +123,7 @@ const Repos = () => {
               <FiExternalLink size={14} className="mt-1" />
             </div>
           </div>
-          </div>
+        </div>
       </div>
     </div>
   );
