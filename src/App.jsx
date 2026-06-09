@@ -28,8 +28,6 @@ const App = () => {
       const repos = await axios.get(
         `https://api.github.com/users/${username}/repos`,
       );
-      console.log(response);
-      console.log(repos);
       setUserData(response.data);
       setRepoData(repos.data);
       setIsError(false);
