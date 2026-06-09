@@ -62,7 +62,7 @@ const App = () => {
             <Repos repoData={repoData} userData={userData} />
           </>
         ) : (
-          <div className="mt-60 font-bold font-heading text-4xl p-4">
+          <div className="mt-20 font-bold font-heading text-4xl p-4">
             <h1>Type a username above to explore their profile</h1>
           </div>
         )}
