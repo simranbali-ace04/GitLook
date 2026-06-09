@@ -10,6 +10,7 @@ const App = () => {
   const [userData, setUserData] = useState(null);
   const [repoData, setRepoData] = useState([]);
   const [isError, setIsError] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
   const resetSearch = () => {
     setIsError(false);
@@ -18,6 +19,8 @@ const App = () => {
   };
 
   const handleSearch = async (username) => {
+    setIsLoading(true);
+    setIsError(false);
     try {
       const response = await axios.get(
         `https://api.github.com/users/${username}`,
@@ -35,6 +38,8 @@ const App = () => {
       setUserData(null);
       setRepoData([]);
       setIsError(true);
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -45,8 +50,12 @@ const App = () => {
     <div className="bg-[#FFFBF4] min-h-screen">
       <div className="flex flex-col items-center justify-center">
         <Heading fetchUser={handleSearch} />
-        {isError ? (
-          <ErrorPage reset={resetSearch}/>
+        {isLoading ? (
+          <div className="mt-40 font-heading font-semibold text-3xl animate-pulse text-smoky">
+            Searching GitHub Index...
+          </div>
+        ) : isError ? (
+          <ErrorPage reset={resetSearch} />
         ) : userData ? (
           <>
             <User data={userData} totalStars={totalStars} />

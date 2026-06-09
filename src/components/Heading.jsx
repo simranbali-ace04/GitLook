@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import { FaGithub } from "react-icons/fa";
 import { IoSearch } from "react-icons/io5";
 
-const Heading = ({fetchUser}) => {
-  const [username , setUsername] = useState('');
+const Heading = ({ fetchUser }) => {
+  const [username, setUsername] = useState("");
 
   return (
     <div>
@@ -27,25 +27,38 @@ const Heading = ({fetchUser}) => {
             repositories.
           </p>
         </div>
-        <div className="w-2/3 px-60 flex items-center-safe">
-          <input
-            type="text"
-            placeholder="Enter GitHub username..."
-            className="h-12 border-2 border-olive-400 px-4 bg-olive-50 w-max-lg w-96"
-            value={username}
-            onChange={(e)=>{
-              setUsername(e.target.value)
-            }}
-          />
-
-          <button className="h-12 w-12 flex items-center justify-center bg-black text-white active:scale-95 "
-          onClick={()=>{
+        <form
+          onSubmit={(e) => {
+            e.preventDefault();
+            if (username.trim == "") return;
             fetchUser(username);
-            
-          }}>
-            <IoSearch size={20} />
-          </button>
-        </div>
+            setUsername("");
+          }}
+        >
+          <div className="w-2/3 px-60 flex items-center-safe">
+            <input
+              type="text"
+              placeholder="Enter GitHub username..."
+              className="h-12 border-2 border-olive-400 px-4 bg-olive-50 w-max-lg w-96"
+              value={username}
+              onChange={(e) => {
+                setUsername(e.target.value);
+              }}
+            />
+
+            <button
+              type="submit"
+              className="h-12 w-12 flex items-center justify-center bg-black text-white active:scale-95 "
+              onClick={() => {
+                if (username.trim == "") return;
+                fetchUser(username);
+                setUsername("");
+              }}
+            >
+              <IoSearch size={24} className="w-6xl"/>
+            </button>
+          </div>
+        </form>
       </div>
     </div>
   );
