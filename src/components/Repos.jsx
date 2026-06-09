@@ -21,7 +21,7 @@ const Repos = ({ repoData, userData }) => {
       <div className="grid grid-cols-3 gap-4 mt-3">
         {/* Cards */}
 
-        {repoData.map(function (elem) {
+        {(repoData || []).map(function (elem) {
           return (
             <div key={elem.id}>
               <div className="w-full border-2 border-olive-400 min-h-40">
