@@ -51,7 +51,7 @@ const App = () => {
       <div className="flex flex-col items-center justify-center">
         <Heading fetchUser={handleSearch} />
         {isLoading ? (
-          <div className="mt-40 font-heading font-semibold text-3xl animate-pulse text-smoky">
+          <div className="mt-20 font-heading font-semibold text-3xl animate-pulse text-smoky">
             Searching GitHub Index...
           </div>
         ) : isError ? (

@@ -9,7 +9,7 @@ const Heading = ({ fetchUser }) => {
     <div>
       <span className="flex justify-between items-center px-20 py-2.5">
         <h2 className="font-heading text-3xl text-smoky font-bold">GitLook</h2>
-        <span className="flex gap-4">
+        <span className="flex gap-4 ">
           <h2 className="font-body text-sm text-olive">
             Explore github profiles with ease.
           </h2>
@@ -29,8 +29,8 @@ const Heading = ({ fetchUser }) => {
         </div>
         <form
           onSubmit={(e) => {
-            e.preventDefault();
             if (username.trim == "") return;
+            e.preventDefault();
             fetchUser(username);
             setUsername("");
           }}
