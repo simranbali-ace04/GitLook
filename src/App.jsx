@@ -3,6 +3,8 @@ import Heading from "./components/Heading";
 import User from "./components/User";
 import Repos from "./components/Repos";
 import axios from "axios";
+import { Routes, Route } from "react-router-dom";
+import ErrorPage from "./pages/ErrorPage";
 
 const App = () => {
   const [userData, setUserData] = useState(null);
@@ -34,7 +36,10 @@ const App = () => {
     <div className="bg-[#FFFBF4] min-h-screen">
       <div className="flex flex-col items-center justify-center">
         <Heading fetchUser={handleSearch} />
-        <User data={userData} totalStars={totalStars}/>
+        <Routes>
+          <Route path="/404" element={<ErrorPage />} />
+        </Routes>
+        <User data={userData} totalStars={totalStars} />
         <Repos repoData={repoData} userData={userData} />
       </div>
     </div>

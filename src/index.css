@@ -1,10 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 
 @import "tailwindcss";
 
 @theme {
   --font-heading: "Cormorant Garamond", serif;
   --font-body: "Inter", sans-serif;
+  --font-errorPage: "Playfair Display", serif;
   --color-smoky: #11120D;
   --color-olive: #565449;
 }
