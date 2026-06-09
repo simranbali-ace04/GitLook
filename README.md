@@ -1,16 +1,38 @@
-# React + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+# GitLook
+ 
+A minimal GitHub profile explorer built while learning how to handle REST APIs with React and Axios. Search any GitHub username and get a clean breakdown of their profile stats and public repositories.
+ 
+**Live Demo → [gitlook-ace.vercel.app](https://gitlook-ace.vercel.app/)**
+ 
+---
+ 
+## What It Does
+ 
+- Fetches user profile and repository data from the GitHub public API concurrently
+- Aggregates total star count across all public repos on the fly
+- Renders repos in a clean grid with language, stars, description, and last-updated timestamp
+- Handles loading, error (including 404s), and empty states cleanly
+- Single-page — no routing, just conditional state rendering
+---
+ 
+## Stack
+ 
+- **React 19** + **Vite**
+- **Tailwind CSS v4**
+- **Axios** for API requests
+- **React Icons**
+---
+ 
+## Hit a 403 Error?
+ 
+GitHub's unauthenticated API allows **60 requests/hour per IP**. If you're testing heavily or on shared Wi-Fi, you'll hit that ceiling fast and get a `403 Forbidden` response.
+ 
+Your code isn't broken — it's just a rate limit.
+ 
+**Fix:** Switch to a mobile hotspot (fresh IP = reset counter), or generate a [Personal Access Token](https://github.com/settings/tokens) and pass it as an `Authorization` header in your Axios requests. Authenticated requests get 5,000/hour.
+ 
+---
+ 
+## License
+ 
+MIT
