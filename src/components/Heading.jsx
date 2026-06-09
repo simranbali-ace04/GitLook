@@ -29,7 +29,7 @@ const Heading = ({ fetchUser }) => {
         </div>
         <form
           onSubmit={(e) => {
-            if (username.trim == "") return;
+            if (username.trim() == "") return;
             e.preventDefault();
             fetchUser(username);
             setUsername("");
@@ -50,7 +50,7 @@ const Heading = ({ fetchUser }) => {
               type="submit"
               className="h-12 w-12 flex items-center justify-center bg-black text-white active:scale-95 "
               onClick={() => {
-                if (username.trim == "") return;
+                if (username.trim() == "") return;
                 fetchUser(username);
                 setUsername("");
               }}
